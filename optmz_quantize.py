@@ -67,9 +67,6 @@ def create_quantized_dfg():
                                ranges,
                                with_quantize=False,
                                normalized_pixel_outputs=[0])
-    # model_quantized = quantize(model,
-    #                            ranges,)
-
     dfg_file_name = f"generated_{Path(args.model_path).stem}.dfg"
     with open(dfg_file_name, "wb") as f:
         f.write(bytes(model_quantized))
