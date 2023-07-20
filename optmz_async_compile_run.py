@@ -29,7 +29,7 @@ nb_batches = 100
 
 def run_async():
     runtime.__full_version__
-    compiler_config = { "permute_input": [[0, 2, 3, 1]] }
+    compiler_config = { "permute_input": [[0, 3, 1, 2]] }
     submitter, queue = session.create_async(str(args.dfg_path),
                                             worker_num=1,
                                             compiler_config=compiler_config,
